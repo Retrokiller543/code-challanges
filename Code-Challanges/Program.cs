@@ -1,4 +1,7 @@
-﻿namespace Code_Challanges
+﻿using NUnit;
+using NUnit.Framework;
+
+namespace Code_Challanges
 {
     internal class Program
     {
@@ -36,7 +39,22 @@
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            FizzBuzz();
+
+            bool palindrome = IsPalindrome("racecar");
+            Console.WriteLine($"Is \"racecar\" a palindrome? {palindrome}");
+
+            int factorial = Factorial(5);
+            Console.WriteLine($"5! = {factorial}");
+
+            PrintFibonacciSeries(10);
+
+            bool prime = IsPrime(7);
+            Console.WriteLine($"Is 7 a prime number? {prime}");
+
+            
+
+            Console.ReadLine();
         }
     }
 }
